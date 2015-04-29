@@ -1,8 +1,7 @@
 package Catalyst::Plugin::AccessLog;
-{
-  $Catalyst::Plugin::AccessLog::VERSION = '1.05';
-}
 # ABSTRACT: Request logging from within Catalyst
+our $VERSION = '1.10'; # VERSION
+our $AUTHORITY = 'cpan:ARODLAND'; # AUTHORITY
 
 use namespace::autoclean;
 use Moose::Role;
@@ -75,17 +74,12 @@ after 'finalize' => sub {
 
 1;
 
+=head1 DEPRECATION NOTICE
 
-__END__
-=pod
-
-=head1 NAME
-
-Catalyst::Plugin::AccessLog - Request logging from within Catalyst
-
-=head1 VERSION
-
-version 1.05
+This module doesn't work well on Catalyst 5.9 or above, and no longer
+passes its tests. Repairing it isn't possible. Using this module for
+anything new isn't recommended; use L<Plack::Middleware::AccessLog> or log
+at the proxy layer. It remains online in support of existing users.
 
 =head1 SYNOPSIS
 
@@ -180,26 +174,4 @@ or bad things will happen to you and everyone you know.
 
 L<http://github.com/arodland/Catalyst-Plugin-AccessLog>
 
-=head1 AUTHORS
-
-=over 4
-
-=item *
-
-Andrew Rodland <andrew@cleverdomain.org>
-
-=item *
-
-Murray <sysmon@cpan.org>
-
-=back
-
-=head1 COPYRIGHT AND LICENSE
-
-This software is copyright (c) 2012 by Andrew Rodland.
-
-This is free software; you can redistribute it and/or modify it under
-the same terms as the Perl 5 programming language system itself.
-
 =cut
-

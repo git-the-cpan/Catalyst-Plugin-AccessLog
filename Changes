@@ -1,15 +1,5 @@
 Changes for Catalyst::Plugin::AccessLog
 
-1.05 2012-03-06
-  * Fix the tests to pass with Catalyst 5.90009+ (fixes "attribute _log
-      is required" error)
-
-1.04 2011-02-14
-  * Accept ">" and "<" in formats like "%>s" which Apache uses.
-
-1.03 2010-11-15
-  * Documentation fix.
-
 1.02 2010-04-28
   * Updated dist.ini for Dist::Zilla v2
   * Require Catalyst 5.80008 and remove the hack to support 5.80003..7
